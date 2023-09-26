@@ -59,7 +59,9 @@ namespace BejegyzesProjekt
 
         public void Feladat2_e()
         {
-
+            Console.WriteLine("Adja meg mire szeretné módosítani a 2. bejegyzés szövegét.");
+            string tart = Console.ReadLine();
+            lista[2].szerkesztes(tart);
         }
         static void Main(string[] args)
         {

@@ -14,6 +14,7 @@ namespace BejegyzesProjekt
         private int likeok;
         private DateTime letrejott;
         private DateTime szerkesztve;
+        private string szerkesztett;
 
         public Bejegyzes(string szerzo, string tartalom, DateTime letrejott)
         {
@@ -33,6 +34,12 @@ namespace BejegyzesProjekt
         public void Like()
         {
             this.likeok++;
+        }
+        public void szerkesztes(string adat)
+        {
+            szerkesztett = tartalom;
+            this.tartalom = adat;
+            szerkesztve = DateTime.Now;
         }
         public override string ToString()
         {
