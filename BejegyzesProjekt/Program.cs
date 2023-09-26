@@ -100,6 +100,19 @@ namespace BejegyzesProjekt
             }
         }
         
+        public void Feladat3_c()
+        {
+            int szamlalo = 0;
+            foreach (var item in lista)
+            {
+                if (item.Likeok < 15)
+                {
+                    szamlalo++;
+                }
+            }
+            Console.WriteLine($"{szamlalo} bejegyzes van amit kevesebb mint 15 likeot kapott.");
+        }
+
         static void Main(string[] args)
         {
         }
