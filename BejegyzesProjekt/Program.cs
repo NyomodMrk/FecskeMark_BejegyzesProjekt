@@ -71,6 +71,20 @@ namespace BejegyzesProjekt
                 Console.WriteLine(item);
             }
         }
+
+        public void Feladat3_a()
+        {
+            int szamlalo = 0;
+            foreach (var item in lista)
+            {
+                if (szamlalo < item.Likeok)
+                {
+                    szamlalo = item.Likeok;
+                }
+            }
+            Console.WriteLine($"A legnépszerűbb bejegyzés {szamlalo} likeot kapott.");
+        }
+
         static void Main(string[] args)
         {
         }
