@@ -85,6 +85,21 @@ namespace BejegyzesProjekt
             Console.WriteLine($"A legnépszerűbb bejegyzés {szamlalo} likeot kapott.");
         }
 
+        public void Feladat3_b()
+        {
+            foreach (var item in lista)
+            {
+                if (item.Likeok > 35)
+                {
+                    Console.WriteLine("Van olyan bejegyzes aminek 35-nél több likeot kapott"); ;
+                }
+                else
+                {
+                    Console.WriteLine("Nincs olyan bejegyzes ami 35-nél több likeot kapott");
+                }
+            }
+        }
+        
         static void Main(string[] args)
         {
         }
