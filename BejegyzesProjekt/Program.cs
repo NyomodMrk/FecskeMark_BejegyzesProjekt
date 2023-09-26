@@ -63,6 +63,14 @@ namespace BejegyzesProjekt
             string tart = Console.ReadLine();
             lista[2].szerkesztes(tart);
         }
+
+        public void Feladat2_f()
+        {
+            foreach (var item in lista)
+            {
+                Console.WriteLine(item);
+            }
+        }
         static void Main(string[] args)
         {
         }
