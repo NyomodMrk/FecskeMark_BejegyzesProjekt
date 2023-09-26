@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,19 @@ namespace BejegyzesProjekt
                     Bejegyzes bejegyz = new Bejegyzes(szerzo, tartalom, dateTime);
                     lista.Add(bejegyz);
                 }
+            }
+        }
+
+        public void Feladat2_c()
+        {
+            StreamReader sr = new StreamReader("bejegyzesek.csv");
+            while (!sr.EndOfStream)
+            {
+                string[] sor = sr.ReadLine().Split(';');
+                string szerzo = sor[0];
+                string tartalom = sor[1];
+                Bejegyzes bejegyz = new Bejegyzes(szerzo,tartalom, DateTime.Now);
+                lista.Add(bejegyz);
             }
         }
         static void Main(string[] args)
