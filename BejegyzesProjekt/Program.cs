@@ -112,9 +112,33 @@ namespace BejegyzesProjekt
             }
             Console.WriteLine($"{szamlalo} bejegyzes van amit kevesebb mint 15 likeot kapott.");
         }
+        public void Feladat3_d()
+        {
+            var ujlista = lista.OrderBy(x => x.Likeok).Reverse();
+            StreamWriter sw = new StreamWriter("bejegyzesek_rendezett.txt");
+            foreach (var item in ujlista)
+            {
+                Console.WriteLine(item);
+                sw.WriteLine(item);
+            }
+        }
+
+        public void Feladatok()
+        {
+            Feladat2_b();
+            Feladat2_c();
+            Feladat2_d();
+            Feladat2_e();
+            Feladat2_f();
+            Feladat3_a();
+            Feladat3_b();
+            Feladat3_c();
+            Feladat3_d();
+        }
 
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }

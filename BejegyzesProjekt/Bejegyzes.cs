@@ -43,7 +43,14 @@ namespace BejegyzesProjekt
         }
         public override string ToString()
         {
-            return $"{this.szerzo} - Likeok: {this.likeok} - Létrehozás ideje: {this.letrejott} \n Szerkesztve: {this.szerkesztve} \n {this.tartalom}";
+            if (szerkesztett == null)
+            {
+                return $"{this.szerzo} - Likeok: {this.likeok} - Létrehozás ideje: {this.letrejott} \n {this.tartalom}";
+            }
+            else
+            {
+                return $"{this.szerzo} - Likeok: {this.likeok} - Létrehozás ideje: {this.letrejott} \n Szerkesztve: {this.szerkesztve}:{szerkesztett} \n {this.tartalom}";
+            }
         }
     }
 }
