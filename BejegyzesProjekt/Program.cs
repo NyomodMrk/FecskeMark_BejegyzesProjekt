@@ -47,6 +47,20 @@ namespace BejegyzesProjekt
                 lista.Add(bejegyz);
             }
         }
+
+        public void Feladat2_d()
+        {
+            Random r = new Random();
+            for (int i = 0; i < lista.Count*20; i++)
+            {
+                lista[r.Next(0, lista.Count)].Like();
+            }
+        }
+
+        public void Feladat2_e()
+        {
+
+        }
         static void Main(string[] args)
         {
         }
